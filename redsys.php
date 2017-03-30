@@ -454,7 +454,7 @@ class Redsys extends PaymentModule
 			'Ds_MerchantParameters' => $paramsBase64,
 			'Ds_Signature' => $signatureMac,
 		);
-				$form_redsys = '<form id="payment-form" method="POST" action="https://sis-t.redsys.es:25443/sis/realizarPago/utf-8">
+				$form_redsys = '<form id="payment-form" method="POST" action="'.$this->urltpv.'">
                               <input name="Ds_SignatureVersion" value="'.$version.'" type="hidden">
                               <input name="Ds_MerchantParameters" value="'.$paramsBase64.'" type="hidden">
                               <input name="Ds_Signature" value="'.$signatureMac.'" type="hidden">
